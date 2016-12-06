@@ -1,5 +1,5 @@
 {
-  "name": "angular-schema-form-nwp-file-upload",
+  "name": "angular-schema-form-nwp-file-upload-extended",
   "homepage": "https://github.com/saburab/angular-schema-form-nwp-file-upload",
   "authors": [
     "Sufian Abu-Rab <s.aburab@gmail.com>"
@@ -33,7 +33,7 @@
   "_release": "6c26056",
   "_resolution": {
     "type": "branch",
-    "branch": "master",
+    "branch": "Custom-for-TQS",
     "commit": "6c26056fdb9060c45d1d091edd5275fc074d8e16"
   },
   "_source": "https://github.com/saburab/angular-schema-form-nwp-file-upload.git",
