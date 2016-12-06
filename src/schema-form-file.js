@@ -94,19 +94,19 @@ angular
                scope.uploadFile = function (file) {
                    file && doUpload(file);
                };
-
+				
                scope.uploadFiles = function (files) {
                    files.length && angular.forEach(files, function (file) {
                        doUpload(file);
                    });
                };
-
+				scope.doNotSendFile = false;
                function doUpload(file) {
                    if (file && !file.$error && scope.url) {
                        file.upload = Upload.upload({
                            url: scope.url,
                            file: file,
-                           do_not_send_email: false
+                           do_not_send_email: scope.doNotSendFile
                        });
 
                        file.upload.then(function (response) {
