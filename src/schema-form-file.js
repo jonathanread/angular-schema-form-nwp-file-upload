@@ -100,13 +100,15 @@ angular
                        doUpload(file);
                    });
                };
-				scope.doNotSendFile = false;
+			   
+				scope.doNotSendFiles = [];
+				
                function doUpload(file) {
                    if (file && !file.$error && scope.url) {
                        file.upload = Upload.upload({
                            url: scope.url,
                            file: file,
-                           do_not_send_email: scope.doNotSendFile
+                           do_not_send_email: scope.doNotSendFiles[file.original_filename]
                        });
 
                        file.upload.then(function (response) {

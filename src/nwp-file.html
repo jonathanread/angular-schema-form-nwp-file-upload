@@ -52,7 +52,7 @@
                  ng-disabled="!picFile || picFile.$error">{{ "buttons.upload" | translate }}
          </button>
       </div>
-      <label class="row mb">Do not send file as attachment<input type="checkbox" ng-model="doNotSendFile" /></label> 
+      <label class="col-sm-12"><input type="checkbox" ng-model="doNotSendFile[picFile.orginal_filename]" /> Do not send file as attachment</label> 
    </div>
    <div ng-messages="uploadForm.$error" ng-messages-multiple="">
       <div class="text-danger errorMsg" ng-message="maxSize">{{ form.schema[picFile.$error].validationMessage | translate }} <strong>{{picFile.$errorParam}}</strong>. ({{ form.schema[picFile.$error].validationMessage2 | translate }} <strong>{{picFile.size / 1000000|number:1}}MB</strong>)</div>
