@@ -36,8 +36,8 @@
     "branch": "Custom-for-TQS",
     "commit": "6c26056fdb9060c45d1d091edd5275fc074d8e16"
   },
-  "_source": "https://github.com/saburab/angular-schema-form-nwp-file-upload.git",
+  "_source": "https://github.com/jonathanread/angular-schema-form-nwp-file-upload/tree/Custom-for-TQS.git",
   "_target": "*",
-  "_originalSource": "https://github.com/saburab/angular-schema-form-nwp-file-upload.git",
+  "_originalSource": "https://github.com/jonathanread/angular-schema-form-nwp-file-upload/tree/Custom-for-TQS.git",
   "_direct": true
 }
