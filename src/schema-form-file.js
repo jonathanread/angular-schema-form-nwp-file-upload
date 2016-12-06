@@ -105,7 +105,8 @@ angular
                    if (file && !file.$error && scope.url) {
                        file.upload = Upload.upload({
                            url: scope.url,
-                           file: file
+                           file: file,
+                           do_not_send_email: false
                        });
 
                        file.upload.then(function (response) {

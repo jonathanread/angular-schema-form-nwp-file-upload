@@ -48,6 +48,7 @@
                {{ picFile.progress }} %
             </div>
          </div>
+         <label>Do not send file as attachment<input type="checkbox" /></label>
          <button class="btn btn-primary btn-sm" type="button" ng-click="uploadFile(picFile)"
                  ng-disabled="!picFile || picFile.$error">{{ "buttons.upload" | translate }}
          </button>
@@ -108,4 +109,5 @@
       <fa fw="fw" name="upload" class="mr-sm"></fa>
       {{ "buttons.add" | translate }}
    </button>
+
 </script>
