@@ -48,11 +48,11 @@
                {{ picFile.progress }} %
             </div>
          </div>
-         <label>Do not send file as attachment<input type="checkbox" /></label> 
          <button class="btn btn-primary btn-sm" type="button" ng-click="uploadFile(picFile)"
                  ng-disabled="!picFile || picFile.$error">{{ "buttons.upload" | translate }}
          </button>
       </div>
+      <label>Do not send file as attachment<input type="checkbox" /></label> 
    </div>
    <div ng-messages="uploadForm.$error" ng-messages-multiple="">
       <div class="text-danger errorMsg" ng-message="maxSize">{{ form.schema[picFile.$error].validationMessage | translate }} <strong>{{picFile.$errorParam}}</strong>. ({{ form.schema[picFile.$error].validationMessage2 | translate }} <strong>{{picFile.size / 1000000|number:1}}MB</strong>)</div>
