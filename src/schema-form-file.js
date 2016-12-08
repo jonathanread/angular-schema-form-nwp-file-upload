@@ -105,14 +105,31 @@ angular
 
                 function doUpload(file, args) {
                     if (file && !file.$error && scope.url) {
-
+						
+						var activitySheetId = null, projectId = null;
+						
+						if(scope.form.relatedTo){
+							switch(scope.form.relatedTo){
+								case 'Project':
+									projectId = scope.model.id;
+									break;
+								case 'Activity Sheet':
+									activitySheetId = scope.model.id;
+									break;
+							}
+						}
+						else if(arg){
+							activitySheetId = args.activity_sheet_id;
+							projectId = args.project_id;
+						}
+						
                         file.upload = Upload.upload({
                             url: scope.url,
                             file: file,
                             data: {
                                 'do_not_email': scope.doNotSendFiles[file.name],
-                                'project_id': scope.form.relatedTo === 'Project' ? scope.model.id : args.project_id,
-                                'activity_sheet_id' : scope.form.relatedTo === 'Activity Sheet' ? scope.model.id : args.activity_sheet_id
+                                'project_id': projectId,
+                                'activity_sheet_id' : activitySheetId
                             }
                         });
 
