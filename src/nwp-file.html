@@ -2,7 +2,7 @@
    <label ng-show="form.title && form.notitle !== true" class="control-label" for="fileInputButton" ng-class="{'sr-only': !showTitle(), 'text-danger': uploadForm.$error.required && !uploadForm.$pristine}">
       {{ form.title }}<i ng-show="form.required">&nbsp;*</i>
    </label>
-	<input sf-field-model />
+	<div>{{$$value$$}} {{model.document_id}}</div>
    <div ng-show="picFile">
       <div ng-include="'uploadProcess.html'" class="mb"></div>
    </div>
